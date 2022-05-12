@@ -1,66 +1,131 @@
-<!DOCTYPE html>
+Главное меню
+ПМ-2 Обчислювальні системи, мережі та комп’ютерні комунікації
+Практична робота #15  Ознайомлення з основними функціями JavaScript
+Дмитро Володимирович Терешкович
+•
+4 мая (Изменено: 4 мая)
+12 баллов
+Срок сдачи: Вчера
+Створити сторінку зі своїм ПІБ включити пункти роботи:
+1) Створення події у вигляді кнопки
+2) Створення події у рішенні прикладу
+3) Створення окремого файлу скрипта (виведення повідомлення при натисканні кнопки)
+3) Створення годинника на сторінці.
+
+Оформити можна як однією сторінкою з підключенням зовнішнього файлу скрипта.
+
+Лабораторна робота 15 Ознайомлення з основами та функціями JavaScript.pdf
+PDF
+
+Видеовстреча с классом
+https://meet.google.com/nfn-njqw-wyt?authuser=0&hs=179
+Комментарии
+Мои задания
+Сдано
+
+Документ Microsoft Word (14).docx
+Word
+
+kskk.html
+HTML
+Личные комментарии
+Практична робота #15 Ознайомлення з основними функціями JavaScript 
 <html>
-<head>
-<meta charset="UTF-8">
- 
- <style>
-   table {
-    width: 60%; /* Ширина таблицы */
-    border: 5px solid #0000FF; /* Рамка вокруг таблицы */
-   }
-  </style>
+<body>
+ <body bgcolor="#c0c0c0">
 
-<table border="0">
+ <h1 style="color:red;">
+<script language="JavaScript">
+ document.write("Степанович Сергій")
+</script>
  
  
-   <tr><td> <p> 
-    Імя  <br>
-    Прізвище   <br>
  
-  </p></td> <td><center> <input type="text" name="firstname" value=""><br><input type="text" name="lastname" value=""></td> </tr>
-  <tr><td>Пароль:</td> <td><center> <input type="password" name="password" size="15" maxlength="30">  </td> </tr>
-   <tr><td>Ваша оцінка</td> <td><select name="bal" size=1>
-<option value="1"> 1 </option>
-<option value="2"> 2 </option>
-<option value="3" selected> 3 </option>
-<option value="4">4</option>
-<option value="5"> 5 </option>
  
-</td> </tr>
-<tr><td>Скільки вам років</td> <td>  <ol>
-    <li><input type="radio" name="age" value="18" checked>< 18</li>
-    <li><input type="radio" name="age" value="18-24">від 18 -- 24</li>
-    <li><input type="radio" name="age" value="25-34">від 25 -- 35</li>
-    <li><input type="radio" name="age" value="35-50">>35</li>
-  </ol></td> </tr>
-<tr><td>Про вас</td> <td><UL>
-  Країна <INPUT NAME = "country "TYPE =" checkbox "VALUE ="
-Ukraine "><br>Інтереси<br>
-
-Футбол <INPUT NAME="country" TYPE="checkbox"
-VALUE="футбол">
-Програмування <INPUT NAME="country" TYPE="checkbox"
-VALUE="Програмування ">
-Дизайн<INPUT NAME="country" TYPE="checkbox"
-VALUE="Дизайн">
-Інше <INPUT NAME="country" TYPE="checkbox"
-VALUE="Інше"> 
- 
-</ UL></td> </tr>
-<tr><td><center>        <input type="reset" value=Скидання>    </td><td><center><input type="submit" value="Відправити"></td></tr>
-
-
- 
-
-
-
- 
-
-
-
-
-    
-  </table>
-
+<form>
+<input type="button" value="Привітайся зі мною" onClick="alert('2005,08,10 в місті Дубровиця')">
+</form>
 </body>
-</html>      
+
+
+<script language="JavaScript">
+function myFunction() {
+document.write("Ласкаво просимо на мою сторінку!<br>");
+
+document.write("Это JavaScript!<br>");}
+myFunction();
+myFunction();
+myFunction();
+</script>
+
+
+
+
+
+
+
+<head>
+<script language="JavaScript">
+function calculation() {
+var x= 12;
+var y= 5;
+var z=34;
+var result=2*x+y-(z/(x*y));
+alert(result);
+}
+</script>
+</head>
+<head>
+<body>
+<form>
+<input type="button" value="Calculate" onClick="calculation()">
+</form>
+</body>
+
+
+
+
+
+<script Language="JavaScript">
+var timeStr, dateStr;
+function clock() {
+now= new Date();
+hours= now.getHours();
+minutes= now.getMinutes();
+seconds= now.getSeconds();
+timeStr= "" + hours;
+timeStr+= ((minutes < 10) ? "+0" : "+") + minutes;
+timeStr+= ((seconds < 10) ? "+0" : "+") + seconds;
+document.clock.time.value = timeStr;
+date= now.getDate();
+month= now.getMonth() +1;
+year= now.getFullYear();
+dateStr= "" + year;
+dateStr+= ((date < 10) ? "+0" : "+") + date;
+dateStr+= "+" + month;
+document.clock.date.value = dateStr;
+Timer= setTimeout("clock()",1000);
+}
+</script>
+</head>
+<body onLoad="clock()">
+ 
+ <form name="clock"  >
+Дата:
+<input type="text"    name="date" name="time"   size="8" value="">
+ 
+<input type="text" name="time" size="8" value=""> 
+ </form>
+ 
+</body></form>
+ 
+
+ 
+ 
+
+     
+ 
+</body>
+</html>
+kskk.html
+Открыт файл "kskk.html"
